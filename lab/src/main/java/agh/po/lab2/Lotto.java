@@ -13,7 +13,6 @@ public class Lotto {
 
         System.out.println("Twoje typy: " + mojeTypy);
 
-
         ArrayList<Integer> wylosowane = new ArrayList<>();
         Random losowanie = new Random();
 
@@ -26,7 +25,6 @@ public class Lotto {
         }
 
         System.out.println("Wylosowane liczby: " + wylosowane);
-
 
         mojeTypy.retainAll(wylosowane);
         System.out.println("Liczba trafień: " + mojeTypy.size());
