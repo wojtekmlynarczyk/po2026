@@ -36,10 +36,20 @@ public class CodingBat {
         }
         return sum;
     }
+    public String theEnd(String str, boolean front) {
+        if (front) {
+            return "" + str.charAt(0);
+        } else {
+            return "" + str.charAt(str.length() - 1);
+        }
+    }
     public static void main(String[] args) {
-        CodingBat codingBat= new CodingBat();
-        codingBat.monkeyTrouble(true, false);
-        codingBat.parrotTrouble(true, 6);
+        CodingBat codingBat = new CodingBat();
+
+        System.out.println(codingBat.monkeyTrouble(true, false));
+        System.out.println(codingBat.parrotTrouble(true, 6));
+        System.out.println(codingBat.sum67(new int[]{1, 1, 6, 7, 2}));
+        System.out.println(codingBat.theEnd("Hello", true));
     }
 
 }

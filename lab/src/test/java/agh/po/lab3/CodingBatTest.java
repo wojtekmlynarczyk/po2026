@@ -28,4 +28,10 @@ public class CodingBatTest {
         assertEquals(22, codingBat.sum67(new int[]{11, 6, 7, 11}));
         assertEquals(18, codingBat.sum67(new int[]{2, 7, 6, 2, 6, 7, 2, 7}));
     }
+    @Test
+    public void theEnd() {
+        assertEquals("H", codingBat.theEnd("Hello", true));
+        assertEquals("o", codingBat.theEnd("Hello", false));
+        assertEquals("o", codingBat.theEnd("oh", true));
+    }
 }
