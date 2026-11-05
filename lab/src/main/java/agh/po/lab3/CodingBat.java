@@ -1,5 +1,8 @@
 package agh.po.lab3;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class CodingBat {
 
     public boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
@@ -51,5 +54,19 @@ public class CodingBat {
         System.out.println(codingBat.sum67(new int[]{1, 1, 6, 7, 2}));
         System.out.println(codingBat.theEnd("Hello", true));
     }
+    public Map<String, String> mapAB2(Map<String, String> map) {
+        if (map.containsKey("a")) {
+            if (map.containsKey("b")) {
+                if (map.get("a").equals(map.get("b"))) {
+                    map.remove("a");
+                    map.remove("b");
+                }
+            }
+        }
+        return map;
+    }
+    public Map<String, Integer> wordCount(String[] strings) {
+        Map<String, Integer> map = new HashMap<>();
+        for (String s : strings)
 
 }

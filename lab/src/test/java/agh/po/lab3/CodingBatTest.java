@@ -4,6 +4,9 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class CodingBatTest {
     CodingBat codingBat= new CodingBat();
     @Test
@@ -33,5 +36,27 @@ public class CodingBatTest {
         assertEquals("H", codingBat.theEnd("Hello", true));
         assertEquals("o", codingBat.theEnd("Hello", false));
         assertEquals("o", codingBat.theEnd("oh", true));
+    }
+    @Test
+    public void mapAB2() {
+        Map<String, String> map1 = new HashMap<>();
+        map1.put("a", "aaa");
+        map1.put("b", "aaa");
+        map1.put("c", "cake");
+        codingBat.mapAB2(map1);
+        assertEquals(1, map1.size());
+
+        Map<String, String> map2 = new HashMap<>();
+        map2.put("a", "aaa");
+        map2.put("b", "bbb");
+        codingBat.mapAB2(map2);
+        assertEquals(2, map2.size());
+
+        Map<String, String> map3 = new HashMap<>();
+        map3.put("a", "aaa");
+        map3.put("b", "bbb");
+        map3.put("c", "aaa");
+        codingBat.mapAB2(map3);
+        assertEquals(3, map3.size());
     }
 }
