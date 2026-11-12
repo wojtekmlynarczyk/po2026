@@ -49,16 +49,6 @@ public class CodingBat {
             return "" + str.charAt(str.length() - 1);
         }
     }
-
-    public static void main(String[] args) {
-        CodingBat codingBat = new CodingBat();
-
-        System.out.println(codingBat.monkeyTrouble(true, false));
-        System.out.println(codingBat.parrotTrouble(true, 6));
-        System.out.println(codingBat.sum67(new int[]{1, 1, 6, 7, 2}));
-        System.out.println(codingBat.theEnd("Hello", true));
-    }
-
     public Map<String, String> mapAB2(Map<String, String> map) {
         if (map.containsKey("a")) {
             if (map.containsKey("b")) {
@@ -69,5 +59,26 @@ public class CodingBat {
             }
         }
         return map;
+    }
+    public Map<String, Integer> wordCount(String[] strings) {
+        Map<String, Integer> map = new HashMap<>();
+        for (String s : strings) {
+            if (map.containsKey(s)) {
+                map.put(s, map.get(s) + 1);
+            } else {
+                map.put(s, 1);
+            }
+        }
+        return map;
+    }
+
+    public static void main(String[] args) {
+        CodingBat codingBat = new CodingBat();
+
+        System.out.println(codingBat.monkeyTrouble(true, false));
+        System.out.println(codingBat.parrotTrouble(true, 6));
+        System.out.println(codingBat.sum67(new int[]{1, 1, 6, 7, 2}));
+        System.out.println(codingBat.theEnd("Hello", true));
+        System.out.println(codingBat.wordCount(new String[]{"a", "b", "a", "c", "b"}));
     }
 }

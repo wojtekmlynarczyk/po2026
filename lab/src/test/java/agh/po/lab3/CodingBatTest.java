@@ -59,4 +59,18 @@ public class CodingBatTest {
         codingBat.mapAB2(map3);
         assertEquals(3, map3.size());
     }
+    @Test
+    public void wordCount() {
+        Map<String, Integer> w1 = codingBat.wordCount(new String[]{"a", "b", "a", "c", "b"});
+        assertEquals(3, w1.size());
+        assertEquals(2, (int) w1.get("a"));
+
+        Map<String, Integer> w2 = codingBat.wordCount(new String[]{"c", "b", "a"});
+        assertEquals(3, w2.size());
+        assertEquals(1, (int) w2.get("a"));
+
+        Map<String, Integer> w3 = codingBat.wordCount(new String[]{"c", "c", "c", "c"});
+        assertEquals(1, w3.size());
+        assertEquals(4, (int) w3.get("c"));
+    }
 }
