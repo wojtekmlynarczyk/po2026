@@ -14,12 +14,14 @@ public class CodingBat {
         }
         return false;
     }
+
     public boolean parrotTrouble(boolean talking, int hour) {
         if (talking && (hour < 7 || hour > 20)) {
             return true;
         }
-            return false;
+        return false;
     }
+
     public int sum67(int[] liczby) {
         int sum = 0;
         boolean pomijam = false;
@@ -39,6 +41,7 @@ public class CodingBat {
         }
         return sum;
     }
+
     public String theEnd(String str, boolean front) {
         if (front) {
             return "" + str.charAt(0);
@@ -46,6 +49,7 @@ public class CodingBat {
             return "" + str.charAt(str.length() - 1);
         }
     }
+
     public static void main(String[] args) {
         CodingBat codingBat = new CodingBat();
 
@@ -54,6 +58,7 @@ public class CodingBat {
         System.out.println(codingBat.sum67(new int[]{1, 1, 6, 7, 2}));
         System.out.println(codingBat.theEnd("Hello", true));
     }
+
     public Map<String, String> mapAB2(Map<String, String> map) {
         if (map.containsKey("a")) {
             if (map.containsKey("b")) {
@@ -65,8 +70,4 @@ public class CodingBat {
         }
         return map;
     }
-    public Map<String, Integer> wordCount(String[] strings) {
-        Map<String, Integer> map = new HashMap<>();
-        for (String s : strings)
-
 }
