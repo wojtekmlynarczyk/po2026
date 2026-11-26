@@ -11,7 +11,9 @@ public class Silnik extends Komponent {
     }
 
     public void uruchom() {
-        this.obroty = 800;
+        if (obroty == 0) {
+            this.obroty = 800;
+        }
     }
 
     public void zatrzymaj() {
@@ -19,15 +21,13 @@ public class Silnik extends Komponent {
     }
 
     public void zwiekszObroty() {
-        if (obroty > 0 && obroty + 500 <= maxObroty) {
-            obroty += 500;
+        if (obroty > 0) {
+            obroty = Math.min(obroty + 500, maxObroty);
         }
     }
 
     public void zmniejszObroty() {
-        if (obroty - 500 >= 800) {
-            obroty -= 500;
-        }
+        obroty = Math.max(obroty - 500, 0);
     }
 
     public int getObroty() {
